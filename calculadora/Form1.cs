@@ -4,6 +4,80 @@ namespace calculadora
 {
     public partial class Form1 : Form
     {
+        public Form1()
+        {
+            InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.NumPad0:
+                case Keys.D0:
+                    btnZero.PerformClick();
+                    break;
+                case Keys.NumPad1:
+                case Keys.D1:
+                    btnUm.PerformClick();
+                    break;
+                case Keys.NumPad2:
+                case Keys.D2:
+                    btnDois.PerformClick();
+                    break;
+                case Keys.NumPad3:
+                case Keys.D3:
+                    btnTres.PerformClick();
+                    break;
+                case Keys.NumPad4:
+                case Keys.D4:
+                    btnQuatro.PerformClick();
+                    break;
+                case Keys.NumPad5:
+                case Keys.D5:
+                    btnCinco.PerformClick();
+                    break;
+                case Keys.NumPad6:
+                case Keys.D6:
+                    btnSeis.PerformClick();
+                    break;
+                case Keys.NumPad7:
+                case Keys.D7:
+                    btnSete.PerformClick();
+                    break;
+                case Keys.NumPad8:
+                case Keys.D8:
+                    btnOito.PerformClick();
+                    break;
+                case Keys.NumPad9:
+                case Keys.D9:
+                    btnNove.PerformClick();
+                    break;
+                case Keys.Add:
+                    btnAdicao.PerformClick();
+                    break;
+                case Keys.Subtract:
+                    btnSubtracao.PerformClick();
+                    break;
+                case Keys.Multiply:
+                    btnMultiplicacao.PerformClick();
+                    break;
+                case Keys.Divide:
+                    btnDivisao.PerformClick();
+                    break;
+                case Keys.Enter:
+                    btnIgual.PerformClick();
+                    break;
+                case Keys.Decimal:
+                    btnVirgula.PerformClick();
+                    break;
+                case Keys.Back:
+                    btnLimpar.PerformClick();
+                    break;
+            }
+        }
 
         public decimal Resultado { get; set; }
 
@@ -16,12 +90,9 @@ namespace calculadora
             Subtracao,
             Multiplicacao,
             Divisao
-        }
+        }   
+        
 
-        public Form1()
-        {
-            InitializeComponent();
-        }
 
         private void btnZero_Click(object sender, EventArgs e)
         {
